@@ -1,21 +1,18 @@
 class Solution {
 public:
-    int findDuplicate(vector<int>& nums) {
-        int s=nums[0];
-        int f=nums[0];
+    int majorityElement(vector<int>& nums) {
+        unordered_map<int, int> map;
+        int n=nums.size()/2;
 
-        do{
-            s=nums[s];
-            f=nums[nums[f]];
-
-        }while(s!=f);
-
-        s=nums[0];
-        while(s!=f){
-            s=nums[s];
-            f=nums[f];
+        for (auto i:nums){
+            map[i]++;
         }
-
-        return s;
+        int c=0;
+        for (auto i:map){
+            if (i.second >n){
+                c=i.first;
+            }
+        }
+        return c;
     }
 };
