@@ -6,7 +6,7 @@ public:
         int right=0;
         int maxSize=0;
         for(auto x:m) cout<<x.first<<" "<<x.second<<endl;
-        while(right<s.size()){
+        while(right<s.size()){ 
             m[s[right]]+=1;
             while(m[s[right]]>1){
                 m[s[left]]-=1;
