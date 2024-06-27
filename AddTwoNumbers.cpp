@@ -2,7 +2,7 @@ class Solution {
 public:
     ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
         ListNode* head=new ListNode();
-        ListNode* temp=head;
+        ListNode* temp=head; 
         int carry=0;
         while(l1!=0 || l2!=0 || carry!=0){
             int x=l1? l1 ->val:0;
