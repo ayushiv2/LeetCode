@@ -6,7 +6,7 @@ public:
         int carry=0;
         while(l1!=0 || l2!=0 || carry!=0){
             int x=l1? l1 ->val:0;
-            int y=l2? l2 ->val:0;
+            int y=l2? l2 ->val:0; 
             int sum=carry+x+y;
             carry=sum/10; 
             temp->next=new ListNode(sum%10);
